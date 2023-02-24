@@ -9,6 +9,9 @@ from sklearn.preprocessing import MinMaxScaler
 from pyts.image import GramianAngularField
 from pyts.image import MarkovTransitionField
 import pandas as pd
+import matplotlib
+
+matplotlib.use("Agg")
 
 
 def converter(file_path: str, 
@@ -52,6 +55,7 @@ def converter(file_path: str,
     # plt.savefig(file_name + ".png", bbox_inches='tight')
     plt.savefig(save_path + file_name + ".png", bbox_inches='tight')
     # plt.show()
+    plt.clf()
 
 def executer(file_path: str, 
              save_path: str,
