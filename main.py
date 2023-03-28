@@ -50,10 +50,10 @@ def converter(file_path: str,
     plt.axis('off')
     plt.tight_layout() # this parameter sharpen the image quality
     plt.imshow(all)
-
+    
     # saving plot on the desired location
     # plt.savefig(file_name + ".png", bbox_inches='tight')
-    plt.savefig(save_path + file_name + ".png", bbox_inches='tight')
+    plt.savefig(save_path + file_name + ".png", bbox_inches='tight', pad_inches = 0)
     # plt.show()
     plt.clf()
 
